@@ -26,6 +26,8 @@ public class LearningCurve : MonoBehaviour
     void Start()
     {
         //local variable
+        var weapon = new Weapon("Hunting bow", 105);
+        var warBow = weapon;
         var hero = new Character();
         var hero2 = new Character("Agatha",10);
         Debug.LogFormat("Через {0} лет вам будет {1}", AddedAge,ComputeAge(CurrentAge,AddedAge));
@@ -33,6 +35,10 @@ public class LearningCurve : MonoBehaviour
         //Debug.LogFormat($"Hero: {hero.Name} - Exp:{hero.Exp}");
         hero.PrintStat();
         hero2.PrintStat();
+        
+        weapon.PrintWeaponStat();
+        warBow.name ="War Bow";
+        warBow.PrintWeaponStat();
     }
 
     // Update is called once per frame

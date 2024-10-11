@@ -21,4 +21,23 @@ public class Character
     {
         Debug.LogFormat($"Hero: {this.Name} - Exp {this.Exp}");
     }
+    private void Reset()
+    {
+        this.Name = "Not Assigned";
+        this.Exp = 0;
+    }
+}
+public struct Weapon
+{
+    public string name;
+    public int damage;
+    public Weapon(string name,int damage)
+    {
+        this.name = name;
+        this.damage = damage;
+    }
+    public void PrintWeaponStat()
+    {
+        Debug.LogFormat($"Weapon {this.name}, has damage {this.damage}");
+    }
 }
