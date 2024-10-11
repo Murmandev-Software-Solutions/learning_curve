@@ -11,13 +11,14 @@ public class Character
     public Character()
     {
         this.Name = "Not Assigned";
+        this.Exp = 0;
     }
     //class constructor
-    public Character(string name, int exp){
+    public Character(string name){
         this.Name = name;
-        this.Exp = exp;
+        this.Exp = 0;
     }
-    public void PrintStat()
+    public virtual void PrintStat()
     {
         Debug.LogFormat($"Hero: {this.Name} - Exp {this.Exp}");
     }

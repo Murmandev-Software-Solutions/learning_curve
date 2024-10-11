@@ -29,13 +29,15 @@ public class LearningCurve : MonoBehaviour
         var weapon = new Weapon("Hunting bow", 105);
         var warBow = weapon;
         var hero = new Character();
-        var hero2 = new Character("Agatha",10);
+        var hero2 = new Character("Agatha");
+        var knight = new Paladin("Sir Arthur",warBow);
         Debug.LogFormat("Через {0} лет вам будет {1}", AddedAge,ComputeAge(CurrentAge,AddedAge));
         //use interpolate string
         //Debug.LogFormat($"Hero: {hero.Name} - Exp:{hero.Exp}");
         hero.PrintStat();
         hero2.PrintStat();
-        
+        knight.PrintStat();
+
         weapon.PrintWeaponStat();
         warBow.name ="War Bow";
         warBow.PrintWeaponStat();
