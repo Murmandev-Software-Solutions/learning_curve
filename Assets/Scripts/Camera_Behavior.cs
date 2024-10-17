@@ -17,11 +17,11 @@ public class Camera_Behavior : MonoBehaviour
     }
     public void LateUpdate() //не путать с LastUpdate
     {
-        //Одновременно работать либо с RigidBody либо прямое управвление через трансформацию
-        /*
+     
+        // следование камеры
         this.transform.position = target.TransformPoint(camOffset);
         this.transform.LookAt(target);
-        */
+        
     }
     public void FixedUpdate() {
 
