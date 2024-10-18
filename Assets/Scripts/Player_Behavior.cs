@@ -16,6 +16,7 @@ public class Player_Behavior : MonoBehaviour
 
     void Start()
     {
+        //инициализация физики
         _rb = GetComponent<Rigidbody>();
     }
     void Update()
