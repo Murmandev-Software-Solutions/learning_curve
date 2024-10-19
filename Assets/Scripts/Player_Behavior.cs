@@ -9,11 +9,7 @@ public class Player_Behavior : MonoBehaviour
     private float vInput;
     private float hInput;
     private Rigidbody _rb;
-    // Start is called before the first frame update
-    // This is empty, and because it removed
-
-    // Update is called once per frame
-
+    public float jumpVelocity = 5f;
     void Start()
     {
         //инициализация физики
@@ -36,5 +32,10 @@ public class Player_Behavior : MonoBehaviour
         //необходимо пояснение по этой функции 
         _rb.MovePosition(this.transform.position + this.transform.forward * vInput * Time.fixedDeltaTime);
         _rb.MoveRotation(_rb.rotation * angleRot);
+        // add jump
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            _rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse);
+        }
     }
 }
