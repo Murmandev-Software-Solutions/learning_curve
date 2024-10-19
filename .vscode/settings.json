@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "learning_curve.sln"
+    "dotnet.defaultSolution": "learning_curve.sln",
+    "dotnet.preferCSharpExtension": true
 }
