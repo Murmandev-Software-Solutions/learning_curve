@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 99736129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enviroment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 182490740}
   - component: {fileID: 182490739}
   - component: {fileID: 182490738}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 366487768}
   - component: {fileID: 366487767}
   - component: {fileID: 366487766}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,9 +427,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053902212294069320, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587889867007585453, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334825151524191586, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023447169050513760, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284381308894434509, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
       propertyPath: m_Name
       value: Barrier_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -448,7 +472,7 @@ GameObject:
   - component: {fileID: 432479681}
   - component: {fileID: 432479680}
   - component: {fileID: 432479679}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,9 +614,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053902212294069320, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587889867007585453, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334825151524191586, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023447169050513760, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284381308894434509, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
       propertyPath: m_Name
       value: Barrier_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -705,7 +753,7 @@ GameObject:
   - component: {fileID: 736839784}
   - component: {fileID: 736839783}
   - component: {fileID: 736839782}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +863,7 @@ GameObject:
   - component: {fileID: 826659736}
   - component: {fileID: 826659735}
   - component: {fileID: 826659734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -920,7 +968,7 @@ GameObject:
   - component: {fileID: 893962552}
   - component: {fileID: 893962551}
   - component: {fileID: 893962550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1195,7 @@ GameObject:
   - component: {fileID: 980233258}
   - component: {fileID: 980233257}
   - component: {fileID: 980233256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,9 +1336,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053902212294069320, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587889867007585453, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334825151524191586, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023447169050513760, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284381308894434509, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
       propertyPath: m_Name
       value: Barrier_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1319,7 +1391,7 @@ GameObject:
   - component: {fileID: 1222287793}
   - component: {fileID: 1222287792}
   - component: {fileID: 1222287791}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1424,7 +1496,7 @@ GameObject:
   - component: {fileID: 1241838715}
   - component: {fileID: 1241838714}
   - component: {fileID: 1241838713}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421297341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Rised_Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1566,7 +1638,7 @@ GameObject:
   - component: {fileID: 1686941439}
   - component: {fileID: 1686941438}
   - component: {fileID: 1686941437}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,9 +1780,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2053902212294069320, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587889867007585453, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334825151524191586, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023447169050513760, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284381308894434509, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
       propertyPath: m_Name
       value: Barrier_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7502211983849133298, guid: 6a72835ae21164254abf6a887223c7fb, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
