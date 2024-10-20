@@ -14,6 +14,9 @@ public class Player_Behavior : MonoBehaviour
     public float distanceToGround = 0.1f;
     public LayerMask groundLayer;
     private CapsuleCollider _col;
+    //add bullet object
+    public GameObject bullet;
+    public float bulletSpeed = 100f;    //bullet start speed
 
     void Start()
     {
@@ -32,7 +35,7 @@ public class Player_Behavior : MonoBehaviour
         this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
         */
     }
-    void FixedUpdate()
+    void FixedUpdate() //use this for Physics purpose only
     {
         Vector3 rotatation = Vector3.up * hInput;
         Quaternion angleRot = Quaternion.Euler(rotatation * Time.fixedDeltaTime);
@@ -43,6 +46,13 @@ public class Player_Behavior : MonoBehaviour
         if(isGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             _rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse);
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(1f,0,0),this.transform.rotation) as GameObject;
+            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
+            BulletRB.velocity = this.transform.forward * bulletSpeed;
+
         }
     }
     private bool isGrounded()
