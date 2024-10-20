@@ -1882,6 +1882,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6628359242653821698, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628359242653821698, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
+      propertyPath: jumpVelocity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628359242653821698, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
+      propertyPath: rotationSpeed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6628359242653821698, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7421097976488372412, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.62
