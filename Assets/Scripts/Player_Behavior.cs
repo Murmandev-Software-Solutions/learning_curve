@@ -16,7 +16,7 @@ public class Player_Behavior : MonoBehaviour
     private CapsuleCollider _col;
     //add bullet object
     public GameObject bullet;
-    public float bulletSpeed = 100f;    //bullet start speed
+    public float bulletSpeed = 100f;    //bullet start speed ignore gravity force
 
     void Start()
     {
@@ -55,11 +55,12 @@ public class Player_Behavior : MonoBehaviour
 
         }
     }
+    //Get info about is player grounded or not
     private bool isGrounded()
     {
         //get center botton of capsule
         Vector3 capsuleBotton = new Vector3(_col.bounds.center.x,_col.bounds.min.y,_col.bounds.center.z);
-        //check interaction 
+        //check interaction with ground layer
         bool grounded = Physics.CheckCapsule(_col.bounds.center,capsuleBotton,distanceToGround,groundLayer, QueryTriggerInteraction.Ignore);
 
         return grounded;
