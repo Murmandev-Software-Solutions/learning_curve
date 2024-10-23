@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Dependencies.Sqlite;
+using UnityEngine.SceneManagement; // management for sceene
 using UnityEngine;
 
 //implement of game manager 
@@ -22,6 +23,7 @@ public class GameBehavior : MonoBehaviour
             {
                 labelText = "Вы собрали все предметы!";
                 showWinScreen = true;
+                Time.timeScale=0f; //freeze game
             }
             else{
                 labelText = "Предмет найдет! Осталось найти еще " + (maxItem- _itemsCollected) + "!!";
@@ -49,7 +51,9 @@ public class GameBehavior : MonoBehaviour
         {
             if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/2-100,320,200),"You WON!"))
             {
-                Debug.Log("Make pause for game here");
+                //Debug.Log("Make pause for game here");
+                SceneManager.LoadScene(0); // reload scene
+                Time.timeScale=1.0f; 
             }
         }
     }
