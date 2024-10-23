@@ -43,6 +43,7 @@ public class Player_Behavior : MonoBehaviour
         _rb.MovePosition(this.transform.position + this.transform.forward * vInput * Time.fixedDeltaTime);
         _rb.MoveRotation(_rb.rotation * angleRot);
         // add jump
+        //in editor need chek, that ground layer is set
         if(isGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             _rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse);
