@@ -10,7 +10,8 @@ public class GameBehavior : MonoBehaviour
     private int _PlayerHP = 10;
     //add getters and setters
     public string labelText = "Соберите все четыре предмета и получите свободу";
-    public int maxItem = 4; //max item on scene
+    public int maxItem = 1; //max item on scene
+    public bool showWinScreen = false;
     public int Items{
         get {return _itemsCollected;}
         set{
@@ -20,6 +21,7 @@ public class GameBehavior : MonoBehaviour
             if(_itemsCollected>=maxItem)
             {
                 labelText = "Вы собрали все предметы!";
+                showWinScreen = true;
             }
             else{
                 labelText = "Предмет найдет! Осталось найти еще " + (maxItem- _itemsCollected) + "!!";
@@ -42,6 +44,13 @@ public class GameBehavior : MonoBehaviour
         GUI.Box(new Rect(20,50,150,25), "Item Collected: " + _itemsCollected );
         //Draw text
         GUI.Label(new Rect(Screen.width/2 -100, Screen.height - 50,380,50),labelText);
-
+        //show WinScreen
+        if(showWinScreen)
+        {
+            if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/2-100,320,200),"You WON!"))
+            {
+                Debug.Log("Make pause for game here");
+            }
+        }
     }
 }

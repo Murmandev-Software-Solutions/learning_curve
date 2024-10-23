@@ -1842,10 +1842,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ea815c39ce14b4eb4ce15d9398e7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  labelText: "\u0421\u043E\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0441\u0435
-    \u0447\u0435\u0442\u044B\u0440\u0435 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430
-    \u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0441\u0432\u043E\u0431\u043E\u0434\u0443"
-  maxItem: 4
+  labelText: "\u0421\u043E\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0441\u0435 
+    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u0430 \u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435
+    \u0441\u0432\u043E\u0431\u043E\u0434\u0443"
+  maxItem: 1
+  showWinScreen: 0
 --- !u!4 &2132133955
 Transform:
   m_ObjectHideFlags: 0
