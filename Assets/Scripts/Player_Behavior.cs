@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,15 +10,20 @@ public class Player_Behavior : MonoBehaviour
     private float vInput;
     private float hInput;
     private Rigidbody _rb;
-    // Start is called before the first frame update
-    // This is empty, and because it removed
-
-    // Update is called once per frame
+    public float jumpVelocity = 5f;
+    public float distanceToGround = 0.1f;
+    public LayerMask groundLayer;
+    private CapsuleCollider _col;
+    //add bullet object
+    public GameObject bullet;
+    public float bulletSpeed = 100f;    //bullet start speed ignore gravity force
 
     void Start()
     {
         //инициализация физики
         _rb = GetComponent<Rigidbody>();
+        //get player capsule collider 
+        _col = GetComponent<CapsuleCollider>();
     }
     void Update()
     {
@@ -29,12 +35,35 @@ public class Player_Behavior : MonoBehaviour
         this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
         */
     }
-    void FixedUpdate()
+    void FixedUpdate() //use this for Physics purpose only
     {
         Vector3 rotatation = Vector3.up * hInput;
         Quaternion angleRot = Quaternion.Euler(rotatation * Time.fixedDeltaTime);
         //необходимо пояснение по этой функции 
         _rb.MovePosition(this.transform.position + this.transform.forward * vInput * Time.fixedDeltaTime);
         _rb.MoveRotation(_rb.rotation * angleRot);
+        // add jump
+        //in editor need chek, that ground layer is set
+        if(isGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            _rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse);
+        }
+        if(Input.GetMouseButtonDown(0))
+        {
+            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(1f,0,0),this.transform.rotation) as GameObject;
+            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
+            BulletRB.velocity = this.transform.forward * bulletSpeed;
+
+        }
+    }
+    //Get info about is player grounded or not
+    private bool isGrounded()
+    {
+        //get center botton of capsule
+        Vector3 capsuleBotton = new Vector3(_col.bounds.center.x,_col.bounds.min.y,_col.bounds.center.z);
+        //check interaction with ground layer
+        bool grounded = Physics.CheckCapsule(_col.bounds.center,capsuleBotton,distanceToGround,groundLayer, QueryTriggerInteraction.Ignore);
+
+        return grounded;
     }
 }
