@@ -19,7 +19,11 @@ public class EnemyBehavior : MonoBehaviour
     }
     void MoveToNextPoint()
     {
+        if(locations.Count ==0) //if locatoin equal 0 then return
+            return;
+        
         agent.destination = locations[locationIdex].position;
+        locationIdex = (locationIdex +1) % locations.Count; //infinite location points
     }
     public void Start()
     {
@@ -38,6 +42,13 @@ public class EnemyBehavior : MonoBehaviour
         if(other.name == "Player")
         {
             Debug.Log("Player has leave trigger site");
+        }
+    }
+    void Update()
+    {
+        if(agent.remainingDistance<0.2f && !agent.pathPending)
+        {
+            MoveToNextPoint();
         }
     }
 }
