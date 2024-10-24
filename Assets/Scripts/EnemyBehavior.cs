@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     public List<Transform> locations; // add list nav point 
     private NavMeshAgent agent;
     private int locationIdex = 0;
+    public Transform player;
     void InitializePatrolRoute()
     {
         foreach(Transform child in patrolRoute)
@@ -30,10 +31,12 @@ public class EnemyBehavior : MonoBehaviour
         InitializePatrolRoute();
         agent = GetComponent<NavMeshAgent>();
         MoveToNextPoint();
+        player = GameObject.Find("Player").transform; //get transform method
     }
     private void OnTriggerEnter(Collider other) {
         if(other.name == "Player")
         {
+            agent.destination = player.position;
             Debug.Log("Player has enter to vision");
         }
     }
@@ -41,6 +44,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if(other.name == "Player")
         {
+            MoveToNextPoint(); // return to patrol route when leave player
             Debug.Log("Player has leave trigger site");
         }
     }
