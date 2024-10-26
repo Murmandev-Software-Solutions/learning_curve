@@ -17,6 +17,7 @@ public class Player_Behavior : MonoBehaviour
     //add bullet object
     public GameObject bullet;
     public float bulletSpeed = 100f;    //bullet start speed ignore gravity force
+    public GameBehavior _gameManager; //rerf to game manager
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Player_Behavior : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         //get player capsule collider 
         _col = GetComponent<CapsuleCollider>();
+        _gameManager = GameObject.Find("GameManager").GetComponent<GameBehavior>(); // get ref to game manager
     }
     void Update()
     {
@@ -65,5 +67,13 @@ public class Player_Behavior : MonoBehaviour
         bool grounded = Physics.CheckCapsule(_col.bounds.center,capsuleBotton,distanceToGround,groundLayer, QueryTriggerInteraction.Ignore);
 
         return grounded;
+    }
+    void OnCollisionEnter(Collision _collision)
+    {
+        //check if collide with enemy
+        if(_collision.gameObject.name == "Enemy")
+        {
+            _gameManager.HP-=1; //reduce HP
+        } 
     }
 }
