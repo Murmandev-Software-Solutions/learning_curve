@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838b6ecd7861b473f9f9d5fdc7637547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnScreenDelay: 1
+  OnScreenDelay: 4
