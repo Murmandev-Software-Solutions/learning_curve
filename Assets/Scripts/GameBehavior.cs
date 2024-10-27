@@ -14,6 +14,11 @@ public class GameBehavior : MonoBehaviour
     public int maxItem = 4; //max item on scene
     public bool showWinScreen = false;
     public bool ShowLoseScreen = false;
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(0); // reload scene
+        Time.timeScale=1.0f; 
+    }
     public int Items{
         get {return _itemsCollected;}
         set{
@@ -59,18 +64,14 @@ public class GameBehavior : MonoBehaviour
         {
             if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/2-100,320,200),"You WON!"))
             {
-                //Debug.Log("Make pause for game here");
-                SceneManager.LoadScene(0); // reload scene
-                Time.timeScale=1.0f; 
+                RestartLevel(); 
             }
         }
         if(ShowLoseScreen)
         {
             if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/2-100,320,200),"Try again!"))
             {
-                //Debug.Log("Make pause for game here");
-                SceneManager.LoadScene(0); // reload scene
-                Time.timeScale=1.0f; 
+                RestartLevel();
             }
         }
     }
