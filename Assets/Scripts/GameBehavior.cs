@@ -59,7 +59,7 @@ public class GameBehavior : MonoBehaviour
         {
             if(GUI.Button(new Rect(Screen.width/2-100,Screen.height/2-100,320,200),"You WON!"))
             {
-                Utilities.RestartLevel();
+                Utilities.RestartLevel(0);
             }
         }
         if(ShowLoseScreen)
