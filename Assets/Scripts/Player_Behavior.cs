@@ -18,6 +18,7 @@ public class Player_Behavior : MonoBehaviour
     public GameObject bullet;
     public float bulletSpeed = 100f;    //bullet start speed ignore gravity force
     public GameBehavior _gameManager; //rerf to game manager
+    // в редакторе незабыть заморозить вращение по всем осям
 
     void Start()
     {
@@ -57,6 +58,7 @@ public class Player_Behavior : MonoBehaviour
             BulletRB.velocity = this.transform.forward * bulletSpeed;
 
         }
+        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
     }
     //Get info about is player grounded or not
     private bool isGrounded()
