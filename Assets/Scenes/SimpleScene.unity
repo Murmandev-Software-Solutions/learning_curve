@@ -2405,6 +2405,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7191181894489764355, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7421097976488372412, guid: c0e5a1b7dd81c43ce9c51fb6751af63a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.62
