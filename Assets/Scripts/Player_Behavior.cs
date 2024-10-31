@@ -58,7 +58,6 @@ public class Player_Behavior : MonoBehaviour
             BulletRB.velocity = this.transform.forward * bulletSpeed;
 
         }
-        if(Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
     }
     //Get info about is player grounded or not
     private bool isGrounded()
