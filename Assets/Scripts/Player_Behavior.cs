@@ -37,6 +37,18 @@ public class Player_Behavior : MonoBehaviour
         this.transform.Translate(Vector3.forward * vInput * Time.deltaTime);
         this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
         */
+        if (isGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
+            Debug.Log("Press SPACEBAR");
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(1f, 0, 0), this.transform.rotation) as GameObject;
+            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
+            BulletRB.velocity = this.transform.forward * bulletSpeed;
+
+        }
     }
     void FixedUpdate() //use this for Physics purpose only
     {
@@ -47,17 +59,7 @@ public class Player_Behavior : MonoBehaviour
         _rb.MoveRotation(_rb.rotation * angleRot);
         // add jump
         //in editor need chek, that ground layer is set
-        if(isGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {
-            _rb.AddForce(Vector3.up * jumpVelocity,ForceMode.Impulse);
-        }
-        if(Input.GetMouseButtonDown(0))
-        {
-            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(1f,0,0),this.transform.rotation) as GameObject;
-            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
-            BulletRB.velocity = this.transform.forward * bulletSpeed;
 
-        }
     }
     //Get info about is player grounded or not
     private bool isGrounded()

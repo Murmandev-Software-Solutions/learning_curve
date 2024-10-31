@@ -12,12 +12,10 @@ public class Camera_Behavior : MonoBehaviour
     {
         target = GameObject.Find("Player").transform;
         Debug.Log("Camera script active");
-        
-
     }
     public void LateUpdate() //не путать с LastUpdate
     {
-     
+        
         // следование камеры
         this.transform.position = target.TransformPoint(camOffset);
         this.transform.LookAt(target);
