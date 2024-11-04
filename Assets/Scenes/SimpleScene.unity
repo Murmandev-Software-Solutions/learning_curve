@@ -2306,8 +2306,8 @@ MonoBehaviour:
   distanceToGround: 0.1
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  bullet: {fileID: 0}
+    m_Bits: 8
+  bullet: {fileID: 674213109131179410, guid: 498bb03fb73a34a70b38dce312d1f9fa, type: 3}
   bulletSpeed: 100
   _gameManager: {fileID: 2132133954}
 --- !u!54 &1857929951
