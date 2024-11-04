@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Http.Headers;
 using UnityEngine;
 
 public class Camera_Behavior : MonoBehaviour
@@ -10,14 +9,13 @@ public class Camera_Behavior : MonoBehaviour
     [SerializeField]private Transform target;
     public void Start()
     {
-        target = GameObject.Find("Player").transform;
+        target = GameObject.Find("Avo_Player").transform;
         Debug.Log("Camera script active");
         
 
     }
     public void LateUpdate() //не путать с LastUpdate
     {
-     
         // следование камеры
         this.transform.position = target.TransformPoint(camOffset);
         this.transform.LookAt(target);
