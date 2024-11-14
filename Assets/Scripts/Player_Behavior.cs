@@ -37,6 +37,7 @@ public class Player_Behavior : MonoBehaviour
         this.transform.Translate(Vector3.forward * vInput * Time.deltaTime);
         this.transform.Rotate(Vector3.up * hInput * Time.deltaTime);
         */
+        
     }
     void FixedUpdate() //use this for Physics purpose only
     {
