@@ -3,7 +3,17 @@ guid: a3ac43d6e5fe040448be9c2a36a54085
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: avocado_full_texture
+    second: {fileID: 2100000, guid: 77943a636c6574a64be9f2bb908ab22a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: avocado_half_texture
+    second: {fileID: 2100000, guid: bbefedfac42fb4148b51b8184ed4dad8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

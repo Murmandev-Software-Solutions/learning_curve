@@ -284,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 3632546078749877659, guid: 6c1a4ed582e494eab8b1263ceb024c75, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a6370a9f6c2e04b0f993b8cf45263fa6, type: 2}
+      objectReference: {fileID: 2100000, guid: 77943a636c6574a64be9f2bb908ab22a, type: 2}
     - target: {fileID: 5006221692397185427, guid: 6c1a4ed582e494eab8b1263ceb024c75, type: 3}
       propertyPath: m_Name
       value: Avo_Player
@@ -2208,6 +2208,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b6b5f7d8bb28e4d928ee177b0171aeb3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1070587001286095999, guid: b6b5f7d8bb28e4d928ee177b0171aeb3, type: 3}
+    - target: {fileID: -7511558181221131132, guid: b6b5f7d8bb28e4d928ee177b0171aeb3, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77943a636c6574a64be9f2bb908ab22a, type: 2}
     - target: {fileID: 919132149155446097, guid: b6b5f7d8bb28e4d928ee177b0171aeb3, type: 3}
       propertyPath: m_Name
       value: avo_hero
