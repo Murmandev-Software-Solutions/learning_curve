@@ -14,6 +14,7 @@ public class Camera_Behavior : MonoBehaviour
         
 
     }
+    //some
     public void LateUpdate() //не путать с LastUpdate
     {
         // следование камеры
